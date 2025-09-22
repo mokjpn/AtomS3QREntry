@@ -1,6 +1,6 @@
 # AtomS3 QR Entry (HID Unicode Alt+X)
 
-M5Atom S3 と ATOM QR-CODE モジュールを使い、読み取った QR コード内容 (UTF-8) を USB HID キーボードとしてホストPCへ入力するサンプルです。 
+[M5Atom S3](https://docs.m5stack.com/ja/core/AtomS3) と [ATOMic QR-CODE](https://docs.m5stack.com/ja/atom/ATOM%20QR-CODE%20Kit) モジュールを使い、読み取った QR コード内容 (UTF-8) を USB HID キーボードとしてホストPCへ入力するサンプルです。 
 日本語など ASCII 以外の文字は Windows の `Alt+X` Unicode 変換機能を利用して 1 文字ずつ入力します。
 
 ## 特徴
@@ -21,6 +21,10 @@ M5Atom S3 と ATOM QR-CODE モジュールを使い、読み取った QR コー�
 | 5V     | 5V         | 5V        | 電源 |
 
 (本コードでは `TRIG_PIN` は入力 PullUp 設定のみ。必要に応じて将来トリガ制御に利用できます。)
+
+ATOMicモジュールとの通信速度は、115200bpsとしていますが、デフォルトのままだと9600bpsなので、
+[モジュールのマニュアル](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/atombase/AtomicQR/AtomicQR_Reader_EN.pdf) にあるバーコードを読み取らせて設定変更する必要があります。
+
 
 ## ビルド & アップロード
 PlatformIO (VS Code) で以下を実行:
